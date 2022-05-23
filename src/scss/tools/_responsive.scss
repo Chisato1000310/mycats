@@ -1,0 +1,19 @@
+// responsibe mixin
+// usage:
+// @use'..//tools/responsive' as responsive;
+// 
+// in selector
+// @inclede responsive.max(){...}
+
+@mixin max($breakpoint:55rem){
+    @media screen and (max-width:$breakpoint) {
+        @content;
+    }
+}
+
+@mixin min($breakpoint: 87.5rem) {
+    @media screen and (min-width:$breakpoint) {
+        @content;        
+    }
+    
+}
