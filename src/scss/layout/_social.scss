@@ -1,0 +1,22 @@
+.social{
+    &__list{
+        list-style: none;
+        display: flex;
+    }
+ 
+    &__item{
+         margin-left: 1.5rem;
+ 
+         &:first-of-type{
+             margin-left: 0;
+         }
+    }
+ 
+    &__link{
+        font-family: var(--font-serif);
+ 
+        &--current{
+            color: var(--color-accent);
+        }
+    }
+ }
