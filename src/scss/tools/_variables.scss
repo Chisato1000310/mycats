@@ -1,19 +1,19 @@
 
 /* global variables */
 :root{
-    --section-gap: 8rem;
+    --section-gap: 7.5rem;
     --section-inner-gap: calc(var(--section-gap)*0.75);
-    --section-inner-gap-small:calc(var(--section-gap)*0.5);
+    --section-inner-gap-small:calc(var(--section-gap)*0.375);
 
-    --grid-gap: 3rem;
-    --grid-container: minmax(30px, 1fr) [inner-start] minmax(0, 78rem) [inner-end] minmax(30px, 1fr);
+    --grid-gap: 3.75rem;
+    --grid-container: minmax(138px, 1fr) [inner-start] minmax(0, 73rem) [inner-end] minmax(138px, 1fr);
     --grid-inner:repeat(12,1fr);
 
     --content-width:55rem;
 
     // Add font here.
-    --font-serif: serif;
-    --font-sans: sans-serif;
+    --font-serif: "ff-providence-sans-web-pro", serif;
+    --font-sans: "neuzeit-grotesk", sans-serif;
 
     // change base size and scale here
     --font-base:1rem;
@@ -27,8 +27,8 @@
     --font-size-6:calc(var(--font-size-5)*var(--font-scale));
 
     // change color here
-    --color-primary:#666;
-    --color-secondary:#fff;
-    --color-complement:#888;
-    --color-accent:#3695f2;
+    --color-primary:#737373;
+    --color-secondary:#F2F2F2;
+    --color-complement:#BFBFBF;
+    --color-accent:#F4ABAB;
 }
