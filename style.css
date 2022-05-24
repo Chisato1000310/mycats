@@ -287,4 +287,45 @@ h5 {
   mix-blend-mode: multiply;
 }
 
+.blog {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+  margin-bottom: var(--section-gap);
+}
+.blog__title {
+  grid-column: inner;
+}
+.blog__inner {
+  grid-column: inner;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  gap: var(--grid-gap);
+  margin-top: var(--section-inner-gap);
+}
+.blog__image {
+  margin: 0;
+  max-height: 28rem;
+  overflow: hidden;
+}
+.blog__content {
+  margin: var(--section-inner-gap-small) 0;
+}
+.blog__text {
+  margin: 2rem 0 var(--section-inner-gap-small);
+}
+.blog__button {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+  padding: 0.7rem 2rem;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid var(--color-accent);
+  font-size: var(--font-size-1);
+  font-family: var(--font-serif);
+}
+.blog__button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+
 /*# sourceMappingURL=style.css.map */

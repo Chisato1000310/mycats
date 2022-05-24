@@ -1,0 +1,40 @@
+@use'../../component/buttons';
+
+.blog{
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    margin-bottom: var(--section-gap);
+
+    &__title{
+        grid-column: inner;
+    }
+
+    &__inner{
+        grid-column: inner;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: var(--grid-gap);
+        margin-top: var(--section-inner-gap);
+    }
+
+    &__image{
+        margin: 0;
+        max-height: 28rem;
+        overflow: hidden;
+    }
+
+    &__content{
+        margin: var(--section-inner-gap-small) 0;
+    }
+
+    &__text{
+        margin: 2rem 0 var(--section-inner-gap-small);
+    }
+
+    &__button{
+        @include buttons.standard;
+    }
+
+
+
+}
