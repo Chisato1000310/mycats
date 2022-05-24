@@ -37,12 +37,22 @@
         background: none;
         border: 0;
         border-bottom: 2px solid var(--color-primary);
-        font-size: var(--font-size-small)
+        font-size: var(--font-size-small);
+        &:focus{
+            outline: none;
+        }
     }
 
     &__submit{
         background: none;
         border: 0;
+
+        img{
+            transition: transform 0.3s;
+            &:hover{
+                transform: translateX(5px);
+            }
+        }
     }
 
 }

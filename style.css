@@ -49,6 +49,10 @@ p, span {
   color: var(--color-primary);
 }
 
+p {
+  line-height: 1.5;
+}
+
 a {
   text-decoration: none;
   color: var(--color-primary);
@@ -106,9 +110,18 @@ h5 {
   border-bottom: 2px solid var(--color-primary);
   font-size: var(--font-size-small);
 }
+.newsletter__input:focus {
+  outline: none;
+}
 .newsletter__submit {
   background: none;
   border: 0;
+}
+.newsletter__submit img {
+  transition: transform 0.3s;
+}
+.newsletter__submit img:hover {
+  transform: translateX(5px);
 }
 
 .header {
