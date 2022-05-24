@@ -39,6 +39,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   color: var(--color-primary);
+  margin: 0;
 }
 
 p, span {
@@ -66,6 +67,7 @@ h4 {
 
 h5 {
   font-size: var(--font-size-2);
+  font-weight: 400;
 }
 
 .header {
@@ -116,6 +118,97 @@ h5 {
 
 .hero {
   min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--grid-container);
+  margin-bottom: var(--section-gap);
+}
+.hero__inner {
+  grid-column: inner;
+  display: grid;
+  grid-template-columns: var(--grid-inner);
+  margin: var(--section-inner-gap-small) 0;
+}
+.hero__stamps {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+}
+.hero__content {
+  grid-column: 2/12;
+  max-height: 600px;
+  position: relative;
+}
+.hero__content::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: -10%;
+  right: -10%;
+  left: 10%;
+  background-color: var(--color-complement);
+  z-index: 1;
+}
+.hero__image {
+  max-height: 600px;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  z-index: 2;
+}
+.hero__image img {
+  display: block;
+}
+.hero__tags {
+  position: absolute;
+  display: grid;
+  bottom: 5.5rem;
+  right: 0;
+  z-index: 3;
+}
+.hero__tag {
+  background-color: var(--color-secondary);
+  padding: 1.5rem 11rem 1.5rem 4rem;
+  margin-bottom: var(--section-inner-gap-small);
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+  margin-bottom: var(--section-gap);
+}
+.profile__title {
+  grid-column: inner;
+  margin-bottom: var(--section-inner-gap);
+}
+.profile__inner {
+  grid-column: inner;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+}
+.profile__content {
+  position: relative;
+}
+.profile__image {
+  max-width: 34.5rem;
+  max-height: 34.5rem;
+  overflow: hidden;
+}
+.profile__image--macaron {
+  display: flex;
+  align-items: center;
+}
+.profile__name {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: var(--color-secondary);
 }
 
 /*# sourceMappingURL=style.css.map */
