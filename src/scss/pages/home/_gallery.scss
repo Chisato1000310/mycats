@@ -1,0 +1,77 @@
+@use '../../component/buttons';
+
+.gallery{
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    margin-bottom: var(--section-gap);
+
+    &__inner{
+        grid-column: inner;
+        display: grid;
+        position: relative;
+        grid-template-columns: var(--grid-inner);
+        grid-template-rows: 5.5rem 11rem 5.5rem 11rem;
+        gap: var(--grid-gap);
+    }
+
+    &__title{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    &__image{
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+
+        &-1{
+            grid-column: 6/13;
+            grid-row: 1/4;
+            margin-right: -9rem;
+        }
+
+        &-2{
+            grid-column: 1/3;
+            grid-row: 2/3;
+            margin-left: -9rem;
+        }
+
+        &-3{
+            grid-column: 3/6;
+            grid-row: 2/3;
+        }
+
+        &-4{
+            grid-column: 1/6;
+            grid-row: 3/5;
+        }
+
+        &-5{
+            grid-column: 6/10;
+            grid-row: 4/5; 
+            align-items: flex-end;           
+        }
+    }
+
+    &__button{
+        grid-column: 9/13;
+        grid-row: 4/5;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        a{
+            @include buttons.standard;
+        }
+    }
+
+    &__stamps{
+        position: absolute;
+        z-index: 5;
+        bottom: 8%;
+        right: 15%;
+        transform: rotate(-10deg);
+        mix-blend-mode: multiply;
+    }
+}

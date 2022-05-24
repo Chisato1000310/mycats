@@ -2,13 +2,13 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: var(--grid-container);
-    margin-bottom: var(--section-gap);
+
 
     &__inner{
         grid-column: inner;
         display: grid;
         grid-template-columns: var(--grid-inner);
-        margin: var(--section-inner-gap-small) 0 ;
+        margin: var(--section-inner-gap-small) 0 var(--section-gap);
     }
 
     &__stamps{
@@ -47,11 +47,9 @@
         margin: 0;
         z-index: 2;
         
-   
         img{
             display: block;
         }
-
 
     }
 
