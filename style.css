@@ -243,6 +243,7 @@ h5 {
 }
 .profile__content {
   position: relative;
+  overflow: hidden;
 }
 .profile__image {
   max-width: 34.5rem;
@@ -254,15 +255,42 @@ h5 {
   display: flex;
   align-items: center;
 }
-.profile__name {
+
+.data {
   position: absolute;
-  bottom: 0;
+  top: 80%;
   text-align: center;
   display: grid;
-  align-items: center;
+  padding: 2.1rem 27%;
   width: 100%;
-  height: 5rem;
+  height: 34.5rem;
   background-color: var(--color-secondary);
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.data:hover {
+  top: 0;
+  padding: 20% 27%;
+}
+.data__name {
+  margin-bottom: var(--section-inner-gap-small);
+}
+.data__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gap);
+  text-align: start;
+}
+.data__content h5 {
+  font-weight: 600;
+}
+.data__content span {
+  font-family: var(--font-serif);
+}
+.data__text {
+  text-align: start;
+  font-family: var(--font-serif);
+  margin: 2rem 0 0;
 }
 
 .gallery {
