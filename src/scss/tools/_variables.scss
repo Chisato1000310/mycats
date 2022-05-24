@@ -19,6 +19,7 @@
     --font-base:1rem;
     --font-scale:1.25;
 
+    --font-size-small:calc(var(--font-base)/var(--font-scale));
     --font-size-1:var(--font-base);
     --font-size-2:calc(var(--font-size-1)*var(--font-scale));
     --font-size-3:calc(var(--font-size-2)*var(--font-scale));
@@ -27,7 +28,7 @@
     --font-size-6:calc(var(--font-size-5)*var(--font-scale));
 
     // change color here
-    --color-primary:#737373;
+    --color-primary:rgb(115, 115, 115);
     --color-secondary:#F2F2F2;
     --color-complement:#BFBFBF;
     --color-accent:#F4ABAB;

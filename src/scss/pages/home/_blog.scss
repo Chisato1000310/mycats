@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: var(--grid-container);
     margin-bottom: var(--section-gap);
+    position: relative;
 
     &__title{
         grid-column: inner;
@@ -28,11 +29,19 @@
     }
 
     &__text{
-        margin: 2rem 0 var(--section-inner-gap-small);
+        margin: 2rem 0 var(--section-inner-gap);
     }
 
     &__button{
         @include buttons.standard;
+    }
+
+    &__stamps{
+        position: absolute;
+        bottom: -180px;
+        right: 0;
+        transform: rotate(120deg);
+        mix-blend-mode: multiply;
     }
 
 
