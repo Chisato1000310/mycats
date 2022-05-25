@@ -1,4 +1,6 @@
 
+@use '../tools/responsive';
+
 /* global variables */
 :root{
     --section-gap: 7.5rem;
@@ -32,4 +34,30 @@
     --color-secondary:#F2F2F2;
     --color-complement:#BFBFBF;
     --color-accent:#F4ABAB;
+
+    @include responsive.max(1024px){
+        --grid-gap: 2.5rem;
+        --grid-container: minmax(6rem, 1fr) [inner-start] minmax(0, 52rem) [inner-end] minmax(6rem, 1fr);
+    }
+
+    @include responsive.max(800px){
+        --section-gap: 6rem;
+        --grid-gap: 2rem;
+        --grid-container: minmax(4rem, 1fr) [inner-start] minmax(0, 52rem) [inner-end] minmax(4rem, 1fr);
+        --font-base:0.8rem;
+    }
+
+    @include responsive.max(500px){
+        --section-gap:3rem;
+        --grid-gap:1rem;
+        --grid-container: minmax(2rem, 1fr) [inner-start] minmax(0, 52rem) [inner-end] minmax(2rem, 1fr);
+        --font-base:0.6rem;
+    }
+
+    @include responsive.max(400px){
+        --grid-container: minmax(1rem, 1fr) [inner-start] minmax(0, 52rem) [inner-end] minmax(1rem, 1fr);
+    }
 }
+
+
+

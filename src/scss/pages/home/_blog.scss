@@ -1,4 +1,5 @@
 @use'../../component/buttons';
+@use '../../tools/responsive';
 
 .blog{
     display: grid;
@@ -13,7 +14,8 @@
     &__inner{
         grid-column: inner;
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns: 55% 40%;
+        align-items: center;
         gap: var(--grid-gap);
         margin-top: var(--section-inner-gap);
     }
@@ -22,6 +24,7 @@
         margin: 0;
         max-height: 28rem;
         overflow: hidden;
+        display: flex;
     }
 
     &__content{
@@ -42,5 +45,37 @@
         right: 3rem;
         transform: rotate(120deg);
         mix-blend-mode: multiply;
+    }
+
+    @include responsive.max(1024px){
+        &__image{
+            margin-left: -13rem;
+        }
+    }
+
+    @include responsive.max(800px){
+        &__stamps{
+            width: 25rem;
+            height: auto;
+        }
+    }
+
+    @include responsive.max(500px){
+        &__stamps{
+            display: none;
+        }
+
+        &__inner{
+            grid-template-columns: 1fr;
+            grid-template-rows: 55% 40%;
+        }
+
+        &__image{
+            margin-left: 0;
+        }
+
+        &__text{
+            margin: 1rem 0 var(--section-inner-gap);
+        }
     }
 }

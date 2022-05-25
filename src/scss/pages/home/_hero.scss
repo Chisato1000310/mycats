@@ -1,8 +1,7 @@
+@use '../../tools/responsive';
+
 .hero{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    margin-bottom: var(--section-inner-gap);
+    height: 100vh;
 
     &__stamps{
         position: absolute;
@@ -13,39 +12,48 @@
     }
 
     &__content{
-        max-width: 1024px;
-        max-height: 600px;
+        width: 70%;
+        height: 80%;
         position: relative;
-        display: flex;
-        align-items: center;
+        margin:var(--section-inner-gap) 0 var(--section-gap);
 
         &::after{
             content: '';
+            background-color: var(--color-complement);
             position: absolute;
             top: 10%;
-            bottom: -10%;
-            right: -5%;
             left: 5%;
-            background-color: var( --color-complement);
+            width: 70vw;
+            height: 70vh;
             z-index: 1;
         }
-
     }
-
 
     &__image{
-        max-height: 600px;
-        position: relative;
-        overflow: hidden;
-        margin: 0;
+        position: absolute;
+        width: 100%;
+        height: 90%;
         z-index: 2;
-        
-        img{
-            display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &-1{
+            background-image: url(assets/pictures/hero-1.jpg);
         }
 
-    }
+        &-2{
+            background-image: url(assets/pictures/hero-2.jpg);
+        }
 
+        &-3{
+            background-image: url(assets/pictures/hero-3.jpg);
+        }
+
+        &-4{
+            background-image: url(assets/pictures/hero-4.jpg);
+        }
+    }
 
     &__tags{
         position: absolute;
@@ -66,10 +74,42 @@
             transform: translateX(-1rem);
         }
     }
+
+    @include responsive.max(800px){
+        &__content{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            &::after{
+                display: none;
+            }
+        }
+
+        &__stamps{
+            width: 25rem;
+            height: auto;
+        }
+    }
+
+    @include responsive.max(500px){
+        &__tag{
+            padding: 1rem 5rem 1rem 2rem;
+        }
+
+        &__stamps{
+            display: none;
+        }
+
+        &__image{
+            &-3{
+                background-position: -100px;
+            }
+        }
+    }
 }
 
 .swiper-slide{
     display: flex;
     justify-content: center;
-    margin-top: var(--section-inner-gap-small);
+    margin:0;
 }

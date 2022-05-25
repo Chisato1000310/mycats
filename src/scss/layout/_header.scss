@@ -1,6 +1,10 @@
+@use '../tools/responsive';
 .header{
     display: grid;
     grid-template-columns: var(--grid-container);
+    position: fixed;
+    z-index: 100;
+    background-color: #fff;
 
     &__inner{
         grid-column: inner;

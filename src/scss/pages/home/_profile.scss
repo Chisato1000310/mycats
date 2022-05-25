@@ -1,7 +1,9 @@
+@use '../../tools/responsive';
+
 .profile{
     display: grid;
     grid-template-columns: var(--grid-container);
-    margin-bottom: var(--section-gap);
+    margin: var(--section-gap) 0;
 
     &__title{
         grid-column: inner;
@@ -31,6 +33,12 @@
             align-items: center;
         }
     }
+
+    @include responsive.max(500px){
+        &__inner{
+            flex-direction: column;
+        }
+    }
 }
 
 .data{
@@ -38,7 +46,7 @@
     top: 80%;
     text-align: center;
     display: grid;
-    padding: 2.1rem 27%;
+    padding: 8% 27%;
     width: 100%;
     height: 34.5rem;
     background-color: var(--color-secondary);
@@ -71,5 +79,34 @@
         text-align: start;
         font-family: var(--font-serif);
         margin: 2rem 0 0;
+    }
+
+    @include responsive.max(1024px){
+        padding:10% 17%;
+        &:hover{
+            padding: 17%;
+        }
+    }
+
+    @include responsive.max(800px){
+        height: 28rem;
+        padding: 5% 30%;
+        top: 90%;
+        &:hover{
+            padding: 30%;
+        }
+    }
+
+    @include responsive.max(500px){
+        height: 33rem;
+    }
+
+    @include responsive.max(350px){
+        top: 80%;
+        padding: 10% 20%;
+        &:hover{
+            padding: 20% 20%;
+        }
+        height: 24rem;
     }
 }

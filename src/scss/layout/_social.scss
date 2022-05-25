@@ -1,7 +1,10 @@
+@use '../tools/responsive';
+
 .social{
     &__list{
         list-style: none;
         display: flex;
+        padding: 0;
     }
  
     &__item{
@@ -14,9 +17,25 @@
  
     &__link{
         font-family: var(--font-serif);
+        display: grid;
  
         &--current{
             color: var(--color-accent);
+        }
+
+        img{
+            width: 1rem;
+            height: auto;
+        }
+    }
+
+    @include responsive.max(500px){
+        &__item{
+            margin-left: 1rem;
+ 
+            &:first-of-type{
+                margin-left: 0;
+            }
         }
     }
  }

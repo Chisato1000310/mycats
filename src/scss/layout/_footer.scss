@@ -1,3 +1,4 @@
+@use '../tools/responsive';
 .footer{
     background-color: var(--color-secondary);
     display: grid;
@@ -51,6 +52,36 @@
             transition: transform 0.3s;
             &:hover{
                 transform: translateX(5px);
+            }
+        }
+    }
+
+    @include responsive.max(500px){
+        width: 15rem;
+
+        &__input{
+            height: 20px;
+        }
+
+        &__submit{
+            img{
+                width: 1rem;
+                height: auto;
+            }
+        }
+    }
+
+    @include responsive.max(400px){
+        width: 10rem;
+
+        &__input{
+            height: 20px;
+        }
+
+        &__submit{
+            img{
+                width: 1rem;
+                height: auto;
             }
         }
     }
