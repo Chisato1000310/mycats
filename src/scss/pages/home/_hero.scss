@@ -2,17 +2,18 @@
     min-height: 100vh;
     width: 100%;
     display: flex;
+    margin-bottom: var(--section-inner-gap);
 
     &__stamps{
         position: absolute;
         z-index: 5;
         bottom: 0;
-        left: 0;
+        left: 0.5rem;
         mix-blend-mode: multiply;
     }
 
     &__content{
-        max-width: 1000px;
+        max-width: 1024px;
         max-height: 600px;
         position: relative;
         display: flex;

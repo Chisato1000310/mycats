@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: var(--grid-container);
     margin-bottom: var(--section-gap);
+    overflow: hidden;
 
     &__inner{
         grid-column: inner;
