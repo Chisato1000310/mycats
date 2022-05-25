@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My cats</title>
 
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="https://use.typekit.net/pwi2ffo.css">
     <link rel="stylesheet" href="style.css">
+    <script src="/js/swiper.js" defer></script>
+
 </head>
 <body>
     <div class="container">
@@ -15,7 +24,7 @@
         <!-- header -->
         <header class="header">
             <div class="header__inner">
-                <h3 class="blanding">My Cats</h3>
+                <a href="" class="blanding"><h3>My Cats</h3></a>
                 <!-- menu -->
                 <nav class="menu">
                     <ul class="menu__list">
@@ -36,20 +45,43 @@
         </header>
 
         <!-- hero -->
-        <section class="hero">
-            <div class="hero__inner">
+        <section class="hero swiper">
 
                 <div class="hero__stamps">
                     <img src="assets/icons/stamps.svg" alt="">
                 </div>
 
-                <!-- slider 1 -->
-                <div class="hero__content">
-                    <figure class="hero__image">
-                        <img src="assets/pictures/hero-1.jpg" alt="">
-                    </figure>
-                </div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
 
+                    <!-- Slide-1 -->
+                    <div class="swiper-slide">
+                        <div class="hero__content">
+                            <figure class="hero__image">
+                                <img src="assets/pictures/hero-1.jpg" alt="">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Slide-2 -->
+                    <div class="swiper-slide">
+                        <div class="hero__content">
+                            <figure class="hero__image">
+                                <img src="assets/pictures/hero-2.jpg" alt="">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- Slide-3 -->
+                    <div class="swiper-slide">
+                        <div class="hero__content">
+                            <figure class="hero__image">
+                                <img src="assets/pictures/hero-3.jpg" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            
                 <div class="hero__tags">
                     <div class="hero__tag">
                         <h5>See our blog</h2>
@@ -59,7 +91,6 @@
                     </div>
                 </div>
 
-            </div>
         </section>
 
         <!-- profile -->
