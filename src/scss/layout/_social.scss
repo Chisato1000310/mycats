@@ -16,16 +16,15 @@
     }
  
     &__link{
-        font-family: var(--font-serif);
         display: grid;
- 
-        &--current{
-            color: var(--color-accent);
-        }
 
         img{
             width: 1rem;
             height: auto;
+            transition: all 0.2s;
+            &:hover{
+                transform: translateY(-3px);
+            }
         }
     }
 

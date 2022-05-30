@@ -22,9 +22,13 @@
 
     &__image{
         margin: 0;
-        max-height: 28rem;
+        max-height: 100%;
         overflow: hidden;
         display: flex;
+
+        img{
+            object-fit: cover;
+        }
     }
 
     &__content{
@@ -60,7 +64,7 @@
         }
     }
 
-    @include responsive.max(500px){
+    @include responsive.max(600px){
         &__stamps{
             display: none;
         }

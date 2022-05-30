@@ -9,6 +9,10 @@
 
    &__item{
         margin-left: 1.5rem;
+        transition: all 0.2s;
+        &:hover{
+            transform: translateY(-3px);
+        }
 
         &:first-of-type{
             margin-left: 0;
